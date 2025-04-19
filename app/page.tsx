@@ -15,11 +15,7 @@ export default function Home() {
 
       <h2 className="text-xl font-semibold mt-10">📝 Writing</h2>
       <ul className="list-disc pl-6 space-y-1 mt-2">
-        <li><a href="/n/revolution" className="text-blue-500 hover:underline">On Political Revolution</a></li>
-        <li><a href="/n/conflict" className="text-blue-500 hover:underline">Conflict Studies & Resistance</a></li>
-        <li><a href="/n/ethics" className="text-blue-500 hover:underline">Cyber Ethics & Islamic Thought</a></li>
-        <li><a href="/n/islam" className="text-blue-500 hover:underline">What is Political Islam?</a></li>
-        <li><a href="/n/future" className="text-blue-500 hover:underline">The Future of Political Order</a></li>
+        <li><a href="/content/blog/failure-of-liberal-world-order.mdx" className="text-blue-500 hover:underline">The Future of Political Order</a></li>
       </ul>
 
       <h2 className="text-xl font-semibold mt-10">💻 Code Projects</h2>
