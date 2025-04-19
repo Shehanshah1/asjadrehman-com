@@ -14,9 +14,10 @@ export default function Home() {
 
 
       <h2 className="text-xl font-semibold mt-10">📝 Writing</h2>
-      <ul className="list-disc pl-6 space-y-1 mt-2">
-        <li><a href="/content/blog/failure-of-liberal-world-order.mdx" className="text-blue-500 hover:underline">The Failure of Liberal World Order</a></li>
-      </ul>
+      <a href="/blog/failure-of-liberal-world-order" className="text-blue-500 hover:underline">
+  Failure of the Liberal World Order
+</a>
+
 
       <h2 className="text-xl font-semibold mt-10">💻 Code Projects</h2>
       <ul className="list-disc pl-6 space-y-1 mt-2">
