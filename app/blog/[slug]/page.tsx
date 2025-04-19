@@ -18,13 +18,15 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   const { content, data } = matter(fileContent);
 
   return (
-    <article className="max-w-4xl mx-auto px-6 md:px-12 py-12 text-justify leading-relaxed">
-      <h1 className="text-4xl font-bold mb-4">{data.title}</h1>
-      <p className="text-gray-500 dark:text-zinc-400 mb-10">{data.publishedAt}</p>
-      <div className="space-y-6">
+    <article className="max-w-6xl mx-auto px-8 md:px-16 py-16 text-justify leading-relaxed">
+      <h1 className="text-5xl font-bold mb-6">{data.title}</h1>
+      <p className="text-gray-500 dark:text-zinc-400 mb-10 text-lg">{data.publishedAt}</p>
+      <div className="space-y-7 text-lg">
         <MDXRemote source={content} />
       </div>
     </article>
   );
+  
+  
   
 }
