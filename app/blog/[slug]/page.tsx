@@ -18,7 +18,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   const { content, data } = matter(fileContent);
 
   return (
-    <article className="max-w-5xl mx-auto px-6 md:px-12 py-12 text-justify leading-relaxed">
+    <article className="max-w-8xl mx-auto px-3 md:px-6 py-12 text-justify leading-relaxed">
       <h1 className="text-4xl font-bold mb-4">{data.title}</h1>
       <p className="text-gray-500 dark:text-zinc-400 mb-10">{data.publishedAt}</p>
       <div className="space-y-6">
