@@ -7,21 +7,18 @@ export function NameTransition() {
   return (
     <ViewTransition>
       <Link href="/about">
-        <h1 className="font-medium  sm:leading-[2em] md:leading-[1.5em] pt-12 text-3xl sm:text-4xl md:text-5xl hover:text-blue-500 transition-colors duration-300 text-center cursor-pointer">
+        <h1 className="font-medium pt-12 text-center text-3xl sm:text-4xl md:text-5xl hover:text-blue-500 transition-colors duration-300 cursor-pointer">
           <span className="sr-only">Asjad Rehman</span>
-          <span
-            aria-hidden="true"
-            className="block overflow-hidden group relative"
-          >
+          <span className="relative block h-[1.2em] sm:h-[1.5em] md:h-[1.5em] overflow-hidden group leading-none">
             {/* English default */}
-            <span className="inline-block transition-all duration-300 ease-in-out group-hover:-translate-y-full whitespace-nowrap">
+            <span className="inline-block transition-transform duration-300 ease-in-out group-hover:-translate-y-full whitespace-nowrap">
               M. Asjad Rehman Hashmi
             </span>
 
             {/* Arabic hover */}
             <span
               dir="rtl"
-              className="inline-block absolute left-0 top-0 transition-all duration-300 ease-in-out translate-y-full group-hover:translate-y-0 whitespace-nowrap"
+              className="absolute top-0 left-0 inline-block transition-transform duration-300 ease-in-out translate-y-full group-hover:translate-y-0 whitespace-nowrap"
             >
               محمد أسجد رحمان هاشمی
             </span>
