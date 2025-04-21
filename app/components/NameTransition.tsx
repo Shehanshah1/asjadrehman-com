@@ -6,27 +6,28 @@ import { unstable_ViewTransition as ViewTransition } from 'react';
 export function NameTransition() {
   return (
     <ViewTransition>
-      <Link href="/about">
-        <h1 className="font-medium md:leading-[1.75em] sm:leading-[2.0em] pt-12 text-4xl sm:text-2xl md:text-4xl hover:text-blue-500 transition-colors duration-300 text-center cursor-pointer">
-          <span className="sr-only">Asjad Rehman</span>
-          <span
-            aria-hidden="true"
-            className="block overflow-hidden group relative"
-          >
-            {/* English default */}
-            <span className="inline-block transition-all sm:text-1xl md:text-5xl duration-300 ease-in-out group-hover:-translate-y-full whitespace-nowrap">
-            M. Asjad Rehman Hashmi
+      <Link href="/about" passHref>
+        <a
+          aria-label="Navigate to About"
+          className="group inline-block text-center cursor-pointer"
+        >
+          <h1 className="font-semibold pt-12 text-2xl sm:text-3xl md:text-5xl leading-tight hover:text-blue-500 transition-colors duration-300">
+            <span className="sr-only">Asjad Rehman</span>
+            <span className="relative inline-block overflow-hidden h-8 sm:h-10 md:h-16">
+              {/* English default */}
+              <span className="block whitespace-nowrap md:transition-transform md:duration-300 md:ease-in-out md:group-hover:-translate-y-full">
+                M. Asjad Rehman Hashmi
+              </span>
+              {/* Arabic on hover (desktop only) */}
+              <span
+                dir="rtl"
+                className="absolute top-0 left-0 block whitespace-nowrap translate-y-full md:transition-transform md:duration-300 md:ease-in-out md:group-hover:translate-y-0"
+              >
+                محمد أسجد رحمان هاشمی
+              </span>
             </span>
-
-            {/* Arabic hover */}
-            <span
-              dir="rtl"
-              className="inline-block absolute left-0 top-0 sm:text-1xl md:text-5xl transition-all duration-300 ease-in-out translate-y-full group-hover:translate-y-0 whitespace-nowrap"
-            >
- محمد أسجد رحمان هاشمی     
-            </span>
-          </span>
-        </h1>
+          </h1>
+        </a>
       </Link>
     </ViewTransition>
   );
