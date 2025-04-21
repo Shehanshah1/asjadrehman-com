@@ -20,7 +20,6 @@ export default function BlogIndex() {
       const filePath = path.join(dir, filename);
       const source = fs.readFileSync(filePath, 'utf-8');
       const { data } = matter(source);
-      // explicitly pull out the frontmatter fields
       return {
         slug: filename.replace(/\.mdx$/, ''),
         title: String(data.title),
@@ -28,7 +27,6 @@ export default function BlogIndex() {
         summary: String(data.summary),
       };
     })
-    // optional: sort newest-first
     .sort(
       (a, b) =>
         new Date(b.publishedAt).getTime() -
@@ -48,9 +46,7 @@ export default function BlogIndex() {
               {post.title}
             </Link>
             <p className="text-sm text-gray-500">{post.publishedAt}</p>
-            <p className="text-gray-800 dark:text-zinc-300">
-              {post.summary}
-            </p>
+            <p className="text-gray-800 dark:text-zinc-300">{post.summary}</p>
           </li>
         ))}
       </ul>
