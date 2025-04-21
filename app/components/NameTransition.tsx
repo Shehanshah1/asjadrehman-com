@@ -14,14 +14,14 @@ export function NameTransition() {
             className="block overflow-hidden group relative"
           >
             {/* English default */}
-            <span className="inline-block transition-all duration-300 ease-in-out group-hover:-translate-y-full whitespace-nowrap">
+            <span className="inline-block transition-all sm:text-2xl md:text-4xl duration-300 ease-in-out group-hover:-translate-y-full whitespace-nowrap">
             M. Asjad Rehman Hashmi
             </span>
 
             {/* Arabic hover */}
             <span
               dir="rtl"
-              className="inline-block absolute left-0 top-0 transition-all duration-300 ease-in-out translate-y-full group-hover:translate-y-0 whitespace-nowrap"
+              className="inline-block absolute left-0 top-0 sm:text-2xl md:text-4xl transition-all duration-300 ease-in-out translate-y-full group-hover:translate-y-0 whitespace-nowrap"
             >
  محمد أسجد رحمان هاشمی     
             </span>
