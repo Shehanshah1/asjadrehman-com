@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <section className="max-w-3xl mx-auto px-4 py-10 text-justify leading-relaxed">
+    <section className="max-w-2xl mx-auto px-4 py-10 text-justify leading-relaxed">
       <NameTransition />
     
       <p className="mt-6 text-lg">
