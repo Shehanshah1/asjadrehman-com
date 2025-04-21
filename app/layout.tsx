@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import { unstable_ViewTransition as ViewTransition } from 'react';
+import CursorGlow from '@/app/components/CursorGlow';
+
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -26,6 +28,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.className}`}>
       <body className="antialiased tracking-tight bg-white dark:bg-zinc-950 text-gray-900 dark:text-zinc-200">
+        <CursorGlow /> {/* ← Cursor spotlight background */}
+
         <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-6 sm:p-8">
           <main className="w-full max-w-3xl md:max-w-[90ch] mx-auto space-y-6 px-2 sm:px-6">
             <ViewTransition name="page-transition">{children}</ViewTransition>
