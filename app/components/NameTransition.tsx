@@ -10,7 +10,7 @@ export function NameTransition() {
         <h1 className="font-medium pt-12 text-center text-3xl sm:text-4xl md:text-5xl hover:text-blue-500 transition-colors duration-300 cursor-pointer">
           <span className="sr-only">Asjad Rehman</span>
           <span className="relative inline-block group">
-            <span className="block overflow-hidden h-[1.75em] sm:h-[1.75em] relative">
+            <span className="block overflow-hidden h-[1.5em] sm:h-[1.5em] relative">
               {/* English name */}
               <span className="block transition-transform duration-300 ease-in-out group-hover:-translate-y-full whitespace-nowrap">
                 M. Asjad Rehman Hashmi
