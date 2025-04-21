@@ -1,7 +1,15 @@
 @import 'tailwindcss';
 
-@theme {
-  --font-family-sans: 'Inter', sans-serif;
+/* Light theme */
+:root[data-theme="light"] {
+  --bg: #ffffff;
+  --fg: #000000;
+}
+
+/* Dark theme */
+:root[data-theme="dark"] {
+  --bg: #000000;
+  --fg: #ffffff;
 }
 
 :root {

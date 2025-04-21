@@ -35,12 +35,15 @@ export default function About() {
         For my resume, click below:
       </p>
       <a
-        href="/AsjadRehman_Resume.pdf"
-        download
-        className="inline-block mt-2 px-5 py-2 border border-gray-600 dark:border-zinc-400 rounded-md text-sm font-medium hover:bg-gray-100 dark:hover:bg-zinc-800 transition-colors"
-      >
-        Download Resume
-      </a>
+  href="/AsjadRehman_Resume.pdf"
+  download
+  className="inline-block mt-2 px-5 py-2 border border-gray-600 dark:border-zinc-400 rounded-md text-sm font-medium hover:bg-gray-100 dark:hover:bg-zinc-800 transition-colors"
+>
+  Download Resume
+</a>
+
+
     </section>
   );
+
 }
