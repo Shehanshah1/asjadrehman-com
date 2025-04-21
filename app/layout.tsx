@@ -7,15 +7,15 @@ import { unstable_ViewTransition as ViewTransition } from 'react';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://leerob.com'),
+  metadataBase: new URL('https://asjadrehman.com'),
   alternates: {
     canonical: '/'
   },
   title: {
-    default: 'Lee Robinson',
-    template: '%s | Lee Robinson'
+    default: 'Asjad Rehman',
+    template: '%s | Asjad Rehman'
   },
-  description: 'Frontend developer, optimist, community builder.'
+  description: 'Political Science + Computer Science @ USM | Essays, Code, and Revolutionary Thought.'
 };
 
 export default function RootLayout({
@@ -25,10 +25,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.className}`}>
-      <body className="antialiased tracking-tight">
-        <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8 dark:bg-zinc-950 bg-white text-gray-900 dark:text-zinc-200">
-          <main className="max-w-[60ch] mx-auto w-full space-y-6">
-            <ViewTransition name="test">{children}</ViewTransition>
+      <body className="antialiased tracking-tight bg-white dark:bg-zinc-950 text-gray-900 dark:text-zinc-200">
+        <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-6 sm:p-8">
+          <main className="w-full max-w-3xl md:max-w-[90ch] mx-auto space-y-6 px-2 sm:px-6">
+            <ViewTransition name="page-transition">{children}</ViewTransition>
           </main>
           <Footer />
           <Analytics />
@@ -40,15 +40,15 @@ export default function RootLayout({
 
 function Footer() {
   const links = [
-    { name: '@leerob', url: 'https://x.com/leerob' },
-    { name: 'youtube', url: 'https://www.youtube.com/@leerob' },
-    { name: 'linkedin', url: 'https://www.linkedin.com/in/leeerob' },
-    { name: 'github', url: 'https://github.com/leerob' }
+    { name: 'X', url: 'https://x.com/Arbab_e_wafa' },
+    { name: 'YouTube', url: 'https://www.youtube.com/@MuhammadAsjadRehmanHashmi' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/muhammad-asjad-rehman-hashmi-b6606629a' },
+    { name: 'GitHub', url: 'https://github.com/Shehanshah1' }
   ];
 
   return (
     <footer className="mt-12 text-center">
-      <div className="flex justify-center space-x-4 tracking-tight">
+      <div className="flex justify-center space-x-4 tracking-tight text-sm">
         {links.map((link) => (
           <a
             key={link.name}
@@ -59,7 +59,7 @@ function Footer() {
           >
             {link.name}
           </a>
-        ))}``
+        ))}
       </div>
     </footer>
   );
