@@ -1,8 +1,18 @@
 'use client';
 
+import Link from 'next/link';
+import { NameTransition } from '../components/NameTransition';
+
 export default function About() {
   return (
-    <section className="space-y-6">
+    <section className="max-w-3xl mx-auto px-6 py-10 space-y-6 text-justify leading-relaxed">
+      {/* ← Home Button */}
+      <nav className="mb-6">
+        <Link href="/" className="text-blue-500 hover:underline">
+          ← Home
+        </Link>
+      </nav>
+
       <h1 className="text-4xl font-bold">About Me</h1>
 
       <p className="text-lg">
@@ -14,23 +24,23 @@ export default function About() {
       </p>
 
       <p className="text-lg">
-        Beyond the classroom, I’ve worked on full-stack software projects, led student organizations, and contributed to religious and academic communities. I'm building this space to archive my ideas, writings, and the questions I’m not done asking yet.
+        Beyond the classroom, I’ve worked on full-stack software projects, led student organizations, and contributed to religious and academic communities. I’m building this space to archive my ideas, writings, and the questions I’m not done asking yet.
       </p>
 
       <p className="text-lg text-gray-500 dark:text-zinc-400">
         This site is a living notebook — not a resume.
       </p>
 
-<p className="text-lg text-gray-500 darkLtext-zince-400">
-    For resume, click below
-</p>
+      <p className="text-lg text-gray-500 dark:text-zinc-400">
+        For my resume, click below:
+      </p>
       <a
-  href="/AsjadRehman_Resume.pdf"
-  download
-  className="inline-block mt-6 px-5 py-2 border border-gray-600 dark:border-zinc-400 rounded-md text-sm font-medium hover:bg-gray-100 dark:hover:bg-zinc-800 transition-colors"
->
-  Download Resume
-</a>
+        href="/AsjadRehman_Resume.pdf"
+        download
+        className="inline-block mt-2 px-5 py-2 border border-gray-600 dark:border-zinc-400 rounded-md text-sm font-medium hover:bg-gray-100 dark:hover:bg-zinc-800 transition-colors"
+      >
+        Download Resume
+      </a>
     </section>
   );
 }
