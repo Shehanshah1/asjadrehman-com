@@ -13,15 +13,16 @@ export function NameTransition() {
         >
           <h1 className="font-semibold pt-12 text-3xl sm:text-4xl md:text-5xl transition-colors duration-300 group-hover:text-blue-500">
             <span className="sr-only">Asjad Rehman</span>
-            <span className="relative block overflow-hidden">
+            {/* wrapper with fixed height to crop overflow */}
+            <span className="relative inline-block overflow-hidden h-[1.25em] sm:h-[1.35em] md:h-[1.5em]">
               {/* English default */}
-              <span className="block whitespace-nowrap transition-transform duration-400 ease-in-out group-hover:-translate-y-full">
+              <span className="block whitespace-nowrap transform transition-transform duration-300 ease-in-out group-hover:-translate-y-full">
                 M. Asjad Rehman Hashmi
               </span>
-              {/* Arabic hover */}
+              {/* Arabic on hover */}
               <span
                 dir="rtl"
-                className="absolute inset-0 block whitespace-nowrap transform translate-y-full transition-transform duration-400 ease-in-out group-hover:translate-y-0"
+                className="absolute top-0 left-0 block whitespace-nowrap transform translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0"
               >
                 محمد أسجد رحمان هاشمی
               </span>
