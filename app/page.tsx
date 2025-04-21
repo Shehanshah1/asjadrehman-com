@@ -14,7 +14,7 @@ export default function Home() {
 
 
       <h2 className="text-xl font-semibold mt-10">📝 Writing</h2>
-      <a href="/blog/failure-of-liberal-world-order" className="text-blue-500 hover:underline">
+      <a href="/blog/failure-of-liberal-world-order" className="text-blue-500 hover:underline" target="_blank">
   Failure of the Liberal World Order
 </a>
 
