@@ -8,15 +8,17 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://asjadrehman.com'),
-  alternates: {
-    canonical: '/'
-  },
   title: {
     default: 'Asjad Rehman',
     template: '%s | Asjad Rehman'
   },
-  description: 'Political Science + Computer Science @ USM | Essays, Code, and Revolutionary Thought.'
+  description: 'Political Science + Computer Science @ USM | Essays, Code, and Revolutionary Thought.',
+  openGraph: {
+    title: 'Asjad Rehman',
+    images: '/opengraph-image.png'
+  }
 };
+
 
 export default function RootLayout({
   children
@@ -44,6 +46,7 @@ function Footer() {
     { name: 'youtube', url: 'https://www.youtube.com/@MuhammadAsjadRehmanHashmi' }, 
     { name: 'linkedin', url: 'https://www.linkedin.com/in/muhammad-asjad-rehman-hashmi-b6606629a' },
     { name: 'github', url: 'https://github.com/Shehanshah1' }
+    
   ];
 
   return (
