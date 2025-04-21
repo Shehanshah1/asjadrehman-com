@@ -7,22 +7,23 @@ export function NameTransition() {
   return (
     <ViewTransition>
       <Link href="/about">
-        <h1 className="font-medium pt-12 text-center text-3xl sm:text-4xl md:text-5xl hover:text-blue-500 transition-colors duration-300 cursor-pointer">
+        <h1 className="font-medium md:leading-[1.75em] sm:leading-[2.0em] pt-12 text-4xl sm:text-2xl md:text-4xl hover:text-blue-500 transition-colors duration-300 text-center cursor-pointer">
           <span className="sr-only">Asjad Rehman</span>
-          <span className="relative inline-block group">
-            <span className="block overflow-hidden h-[1.5em] sm:h-[1.5em] relative">
-              {/* English name */}
-              <span className="block transition-transform duration-300 ease-in-out group-hover:-translate-y-full whitespace-nowrap">
-                M. Asjad Rehman Hashmi
-              </span>
+          <span
+            aria-hidden="true"
+            className="block overflow-hidden group relative"
+          >
+            {/* English default */}
+            <span className="inline-block transition-all sm:text-1xl md:text-5xl duration-300 ease-in-out group-hover:-translate-y-full whitespace-nowrap">
+            M. Asjad Rehman Hashmi
+            </span>
 
-              {/* Arabic name */}
-              <span
-                dir="rtl"
-                className="absolute top-0 left-0 block transition-transform duration-300 ease-in-out translate-y-full group-hover:translate-y-0 whitespace-nowrap"
-              >
-                محمد أسجد رحمان هاشمی
-              </span>
+            {/* Arabic hover */}
+            <span
+              dir="rtl"
+              className="inline-block absolute left-0 top-0 sm:text-1xl md:text-5xl transition-all duration-300 ease-in-out translate-y-full group-hover:translate-y-0 whitespace-nowrap"
+            >
+ محمد أسجد رحمان هاشمی     
             </span>
           </span>
         </h1>
