@@ -7,7 +7,7 @@ export function NameTransition() {
   return (
     <ViewTransition>
       <Link href="/about">
-        <h1 className="font-medium pt-12 text-4xl leading-[1.75em] sm:text-base md:text-4xl hover:text-blue-500 transition-colors duration-300 text-center cursor-pointer">
+        <h1 className="font-medium pt-12 text-4xl leading-[1.75em] sm:text-base md:text-4xl hover:text-blue-500 transition-colors duration-300 text-left cursor-pointer">
           <span className="sr-only">Asjad Rehman</span>
           <span
             aria-hidden="true"
