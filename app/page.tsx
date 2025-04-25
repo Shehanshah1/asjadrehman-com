@@ -3,6 +3,7 @@
 import { NameTransition } from './components/NameTransition';
 import Link from 'next/link';
 
+
 export default function Home() {
   return (
     <section className="max-w-3xl mx-auto px-4 py-10 text-justify leading-relaxed">

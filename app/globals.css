@@ -29,10 +29,18 @@ html {
 body {
   text-rendering: optimizeLegibility;
   font-family: var(--font-family-sans);
-  background: linear-gradient(to bottom, var(--bg-dark), #000);
+  background: linear-gradient(to bottom, var(--bg-light), #fff);
   background-attachment: fixed;
+  color: #0f172a;
+  transition: background 0.5s ease, color 0.5s ease;
 }
 
+.dark body {
+  background: linear-gradient(to bottom, var(--bg-dark), #000);
+  color: #e2e8f0;
+}
+
+/* ---- Headings ---- */
 h1, h2, h3, h4 {
   text-wrap: balance;
 }
@@ -68,6 +76,7 @@ pre {
 pre::-webkit-scrollbar {
   display: none;
 }
+
 code {
   font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
   font-size: 14px;
@@ -90,14 +99,18 @@ code:not(pre code) span {
   color: black !important;
 }
 
-/* ---- Dark Mode Overrides ---- */
-@media (prefers-color-scheme: dark) {
-  code {
-    background-color: #27272a;
-  }
-  code:not(pre code) span {
-    color: #e4e4e7;
-  }
+/* ---- Dark Mode Code Overrides ---- */
+.dark code {
+  background-color: #27272a;
+}
+.dark code:not(pre code) span {
+  color: #e4e4e7 !important;
+}
+.dark pre {
+  background-color: #16161e;
+}
+.dark pre code span.sh__token--identifier {
+  color: white !important;
 }
 
 /* ---- Section Fade In ---- */
