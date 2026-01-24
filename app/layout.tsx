@@ -61,7 +61,7 @@ function Footer() {
   const links = [
     { name: 'X', url: 'https://x.com/Arbab_e_wafa' },
     { name: 'YouTube', url: 'https://www.youtube.com/@MuhammadAsjadRehmanHashmi' },
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/muhammad-asjad-rehman-hashmi-b6606629a' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/asjadrehman/' },
     { name: 'GitHub', url: 'https://github.com/Shehanshah1' },
   ];
 

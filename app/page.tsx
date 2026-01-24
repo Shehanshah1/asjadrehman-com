@@ -10,7 +10,11 @@ export default function Home() {
       <NameTransition />
 
       <p className="mt-6 text-lg">
-        I’m a student of political science and computer science with a growing interest in revolutionary theory, political Islam, and conflict studies. My work spans from building software to exploring ideas around state power, resistance, and identity — including emerging areas like cyber ethics.
+        I work at the intersection of technology, leadership, and governance. My focus is on building and managing systems—technical, organizational, and institutional—that operate reliably under pressure.
+
+I serve as Vice President and Imam at the Islamic Center of Hattiesburg and have led the Muslim Student Association at the University of Southern Mississippi as President across two terms. Professionally, I oversee operations and client success at InfinixLeverage and as Complex Manager for Union Department at USM.
+
+My background is in computer science and information security, with ongoing training in cybersecurity and risk management. Across all roles, I bring a disciplined, values-driven approach to execution, accountability, and long-term sustainability.
       </p>
 
       <h2 className="text-xl font-semibold mt-10">📝 Writing</h2>
