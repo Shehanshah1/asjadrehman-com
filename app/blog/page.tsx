@@ -20,7 +20,6 @@ export default function BlogIndex() {
       const filePath = path.join(dir, filename);
       const source = fs.readFileSync(filePath, 'utf-8');
       const { data } = matter(source);
-      // explicitly pull out the frontmatter fields
       return {
         slug: filename.replace(/\.mdx$/, ''),
         title: String(data.title),
@@ -28,7 +27,6 @@ export default function BlogIndex() {
         summary: String(data.summary),
       };
     })
-    // optional: sort newest-first
     .sort(
       (a, b) =>
         new Date(b.publishedAt).getTime() -
@@ -36,24 +34,46 @@ export default function BlogIndex() {
     );
 
   return (
-    <section className="max-w-4xl mx-auto px-6 py-12 space-y-8">
-      <h1 className="text-4xl font-bold">Essays</h1>
-      <ul className="space-y-6">
+    <section className="max-w-3xl mx-auto px-4 py-10 space-y-8">
+      <nav className="fade-section">
+        <Link href="/" className="text-sm font-medium text-gray-500 dark:text-zinc-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors inline-flex items-center gap-1">
+          <span>&larr;</span> Home
+        </Link>
+      </nav>
+
+      <div className="fade-section-delay-1">
+        <h1 className="text-4xl font-bold tracking-tight">Essays</h1>
+        <div className="accent-line mt-3" />
+      </div>
+
+      <div className="space-y-2 fade-section-delay-2">
         {posts.map((post) => (
-          <li key={post.slug} className="space-y-1">
-            <Link
-              href={`/blog/${post.slug}`}
-              className="text-2xl font-semibold hover:underline"
-            >
-              {post.title}
-            </Link>
-            <p className="text-sm text-gray-500">{post.publishedAt}</p>
-            <p className="text-gray-800 dark:text-zinc-300">
-              {post.summary}
-            </p>
-          </li>
+          <Link
+            key={post.slug}
+            href={`/blog/${post.slug}`}
+            className="hover-card block rounded-lg p-5 -mx-4 group"
+          >
+            <div className="flex items-start justify-between gap-4">
+              <div className="space-y-1.5">
+                <h2 className="text-xl font-semibold text-gray-900 dark:text-zinc-100 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+                  {post.title}
+                </h2>
+                <p className="text-sm text-gray-400 dark:text-zinc-500 font-medium">
+                  {new Date(post.publishedAt).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  })}
+                </p>
+                <p className="text-base text-gray-600 dark:text-zinc-400 leading-relaxed">
+                  {post.summary}
+                </p>
+              </div>
+              <span className="text-gray-300 dark:text-zinc-600 mt-1.5 shrink-0 text-lg">&rarr;</span>
+            </div>
+          </Link>
         ))}
-      </ul>
+      </div>
     </section>
   );
 }
