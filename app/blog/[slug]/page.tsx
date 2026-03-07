@@ -12,15 +12,16 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function BlogPost({ params }: { params: { slug: string } }) {
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const dir = path.join(process.cwd(), 'content/blog');
   const files = fs.readdirSync(dir).filter((f) => f.endsWith('.mdx')).sort();
   const slugs = files.map((filename) => filename.replace(/\.mdx$/, ''));
-  const index = slugs.findIndex((s) => s === params.slug);
+  const index = slugs.findIndex((s) => s === slug);
   const prevSlug = index > 0 ? slugs[index - 1] : null;
   const nextSlug = index < slugs.length - 1 ? slugs[index + 1] : null;
 
-  const filePath = path.join(dir, `${params.slug}.mdx`);
+  const filePath = path.join(dir, `${slug}.mdx`);
   const fileContent = fs.readFileSync(filePath, 'utf-8');
   const { content, data } = matter(fileContent);
 
