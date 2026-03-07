@@ -24,6 +24,7 @@ const nextConfig: NextConfig = {
      permanent: !!permanent
    }));
  },
+ turbopack: {},
  experimental: {
    mdxRs: true,
    viewTransition: true
