@@ -40,7 +40,7 @@ export default function RootLayout({
           </header>
 
           {/* ─── main content w/ page transitions ─────────────────────────────── */}
-          <main className="w-full max-w-3xl md:max-w-[90ch] mx-auto space-y-6 px-2 sm:px-6">
+          <main className="w-full max-w-3xl md:max-w-[90ch] mx-auto space-y-6 px-2 sm:px-6 flex-1">
             <ViewTransition name="page-transition">
               {children}
             </ViewTransition>
@@ -66,19 +66,27 @@ function Footer() {
   ];
 
   return (
-    <footer className="mt-12 text-center">
-      <div className="flex justify-center space-x-4 tracking-tight text-sm">
-        {links.map((link) => (
-          <a
-            key={link.name}
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-200"
-          >
-            {link.name}
-          </a>
-        ))}
+    <footer className="mt-16 pt-8 pb-2">
+      <div className="max-w-3xl mx-auto px-4">
+        <div className="section-divider" style={{ margin: '0 0 1.5rem 0' }} />
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-gray-400 dark:text-zinc-600">
+            &copy; {new Date().getFullYear()} Asjad Rehman
+          </p>
+          <div className="flex items-center space-x-5 tracking-tight text-sm">
+            {links.map((link) => (
+              <a
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 dark:text-zinc-500 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-200"
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
     </footer>
   );
