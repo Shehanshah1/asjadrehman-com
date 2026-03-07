@@ -36,7 +36,7 @@ export default function BlogIndex() {
   return (
     <section className="max-w-3xl mx-auto px-4 py-10 space-y-8">
       <nav className="fade-section">
-        <Link href="/" className="text-sm font-medium text-gray-500 dark:text-zinc-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors inline-flex items-center gap-1">
+        <Link href="/" className="text-sm font-medium text-gray-500 dark:text-zinc-400 hover:text-[var(--accent-secondary)] dark:hover:text-[var(--accent)] transition-colors inline-flex items-center gap-1">
           <span>&larr;</span> Home
         </Link>
       </nav>
@@ -55,7 +55,7 @@ export default function BlogIndex() {
           >
             <div className="flex items-start justify-between gap-4">
               <div className="space-y-1.5">
-                <h2 className="text-xl font-semibold text-gray-900 dark:text-zinc-100 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+                <h2 className="text-xl font-semibold text-gray-900 dark:text-zinc-100 group-hover:text-[var(--accent-secondary)] dark:group-hover:text-[var(--accent)] transition-colors">
                   {post.title}
                 </h2>
                 <p className="text-sm text-gray-400 dark:text-zinc-500 font-medium">
