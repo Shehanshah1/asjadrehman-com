@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import { unstable_ViewTransition as ViewTransition } from 'react';
 import CursorGlow from '@/app/components/CursorGlow';
+import IslamicPattern from '@/app/components/IslamicPattern';
 import ThemeToggle from '@/app/components/ThemeToggle';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -31,6 +32,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="bg-white text-gray-900 dark:bg-zinc-950 dark:text-zinc-100 transition-colors duration-300 antialiased tracking-tight">
+        <IslamicPattern />
         <CursorGlow />
 
         <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-6 sm:p-8">
@@ -80,7 +82,7 @@ function Footer() {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 dark:text-zinc-500 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-200"
+                className="text-gray-400 dark:text-zinc-500 hover:text-[var(--accent-secondary)] dark:hover:text-[var(--accent)] transition-colors duration-200"
               >
                 {link.name}
               </a>

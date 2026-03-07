@@ -16,13 +16,13 @@ export default function Home() {
 
       {/* ─── Navigation ──────────────────────────────────────── */}
       <nav className="fade-section-delay-1 mt-8 flex flex-wrap gap-4 text-sm font-medium">
-        <Link href="/about" className="text-gray-600 dark:text-zinc-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+        <Link href="/about" className="text-gray-600 dark:text-zinc-400 hover:text-[var(--accent-secondary)] dark:hover:text-[var(--accent)] transition-colors">
           About
         </Link>
-        <Link href="/blog" className="text-gray-600 dark:text-zinc-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+        <Link href="/blog" className="text-gray-600 dark:text-zinc-400 hover:text-[var(--accent-secondary)] dark:hover:text-[var(--accent)] transition-colors">
           Essays
         </Link>
-        <Link href="/contact" className="text-gray-600 dark:text-zinc-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+        <Link href="/contact" className="text-gray-600 dark:text-zinc-400 hover:text-[var(--accent-secondary)] dark:hover:text-[var(--accent)] transition-colors">
           Contact
         </Link>
       </nav>
@@ -59,7 +59,7 @@ export default function Home() {
           >
             <div className="flex items-start justify-between gap-4">
               <div>
-                <span className="font-medium text-gray-900 dark:text-zinc-100 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+                <span className="font-medium text-gray-900 dark:text-zinc-100 group-hover:text-[var(--accent-secondary)] dark:group-hover:text-[var(--accent)] transition-colors">
                   Failure of the Liberal World Order
                 </span>
                 <p className="text-sm text-gray-500 dark:text-zinc-500 mt-1">
@@ -75,7 +75,7 @@ export default function Home() {
           >
             <div className="flex items-start justify-between gap-4">
               <div>
-                <span className="font-medium text-gray-900 dark:text-zinc-100 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+                <span className="font-medium text-gray-900 dark:text-zinc-100 group-hover:text-[var(--accent-secondary)] dark:group-hover:text-[var(--accent)] transition-colors">
                   Art and Dissent
                 </span>
                 <p className="text-sm text-gray-500 dark:text-zinc-500 mt-1">
@@ -104,7 +104,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="font-medium text-gray-900 dark:text-zinc-100 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+            <span className="font-medium text-gray-900 dark:text-zinc-100 group-hover:text-[var(--accent-secondary)] dark:group-hover:text-[var(--accent)] transition-colors">
               Madina Enterprises
             </span>
             <p className="text-sm text-gray-500 dark:text-zinc-500 mt-1">
@@ -118,7 +118,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="font-medium text-gray-900 dark:text-zinc-100 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+            <span className="font-medium text-gray-900 dark:text-zinc-100 group-hover:text-[var(--accent-secondary)] dark:group-hover:text-[var(--accent)] transition-colors">
               CryptoPals Challenge Suite
             </span>
             <p className="text-sm text-gray-500 dark:text-zinc-500 mt-1">
@@ -130,7 +130,7 @@ export default function Home() {
         <div className="mt-4">
           <a
             href="https://github.com/Shehanshah1"
-            className="text-sm font-medium text-gray-500 dark:text-zinc-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors inline-flex items-center gap-1"
+            className="text-sm font-medium text-gray-500 dark:text-zinc-400 hover:text-[var(--accent-secondary)] dark:hover:text-[var(--accent)] transition-colors inline-flex items-center gap-1"
             target="_blank"
             rel="noopener noreferrer"
           >

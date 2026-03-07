@@ -1,13 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import { NameTransition } from '../components/NameTransition';
 
 export default function About() {
   return (
     <section className="max-w-3xl mx-auto px-4 py-10 space-y-6 leading-relaxed">
       <nav className="fade-section">
-        <Link href="/" className="text-sm font-medium text-gray-500 dark:text-zinc-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors inline-flex items-center gap-1">
+        <Link href="/" className="text-sm font-medium text-gray-500 dark:text-zinc-400 hover:text-[var(--accent-secondary)] dark:hover:text-[var(--accent)] transition-colors inline-flex items-center gap-1">
           <span>&larr;</span> Home
         </Link>
       </nav>
@@ -19,15 +18,19 @@ export default function About() {
 
       <div className="fade-section-delay-2 space-y-5 text-justify">
         <p className="text-lg text-gray-700 dark:text-zinc-300">
-          I&rsquo;m currently pursuing a dual degree in Political Science and Computer Science at the University of Southern Mississippi, with academic interests grounded in revolutionary politics, conflict theory, political Islam, and the philosophical roots of power.
+          I study Political Science and Computer Science at the University of Southern Mississippi&mdash;two disciplines that, at first glance, seem worlds apart, but for me converge on the same set of questions: who holds power, how systems are built and dismantled, and what it means to act with principle in an age of complexity.
         </p>
 
         <p className="text-base text-gray-600 dark:text-zinc-400">
-          My academic journey is still unfolding&mdash;but I&rsquo;m particularly drawn to questions around legitimacy, resistance, and postcolonial state formation. I&rsquo;ve also begun exploring cyber ethics as a modern frontier in political theory.
+          My intellectual life is anchored in revolutionary politics, conflict theory, and political Islam. I&rsquo;m drawn to the study of legitimacy and resistance&mdash;how postcolonial states take shape, how authority is challenged, and how faith traditions produce frameworks for justice that the secular academy often overlooks. More recently, I&rsquo;ve been exploring the intersection of cyber ethics and political theory, examining how digital sovereignty and surveillance reshape the boundaries of the state.
         </p>
 
         <p className="text-base text-gray-600 dark:text-zinc-400">
-          Beyond the classroom, I&rsquo;ve worked on full-stack software projects, led student organizations, and contributed to religious and academic communities. I&rsquo;m building this space to archive my ideas, writings, and the questions I&rsquo;m not done asking yet.
+          On the technical side, I build full-stack software and think about systems at the architectural level. I&rsquo;ve led student organizations, served religious and academic communities, and spent time in spaces where ideas are tested not just in theory but in practice. I believe the best work happens at the edges&mdash;where disciplines collide and assumptions are forced to defend themselves.
+        </p>
+
+        <p className="text-base text-gray-600 dark:text-zinc-400">
+          This site is where I think out loud. It houses my essays, projects, and the questions I haven&rsquo;t finished wrestling with. If something here sparks a thought, I&rsquo;d welcome the conversation.
         </p>
       </div>
 

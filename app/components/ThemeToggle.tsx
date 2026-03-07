@@ -35,7 +35,7 @@ export default function ThemeToggle() {
   return (
     <div className="flex items-center justify-center space-x-3 mb-6">
       {/* Sun Icon */}
-      <Sun size={20} className="text-yellow-500" />
+      <Sun size={20} className="text-[var(--accent)]" />
 
       {/* Toggle Button */}
       <button
@@ -53,7 +53,7 @@ export default function ThemeToggle() {
       </button>
 
       {/* Moon Icon */}
-      <Moon size={20} className="text-blue-500" />
+      <Moon size={20} className="text-[var(--accent-secondary)]" />
     </div>
   );
 }

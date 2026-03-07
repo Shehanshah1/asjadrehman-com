@@ -13,11 +13,11 @@
   --sh-property: #73daca;
   --sh-entity: #e0af68;
 
-  --bg-light: #f8fafc;
-  --bg-dark: #0a0a0f;
-  --accent: #38bdf8;
-  --accent-secondary: #818cf8;
-  --highlight: #facc15;
+  --bg-light: #faf8f5;
+  --bg-dark: #0c0e14;
+  --accent: #c8a45c;
+  --accent-secondary: #1a7a6d;
+  --highlight: #c8a45c;
 }
 
 /* ---- Base Styling ---- */
@@ -30,14 +30,14 @@ html {
 body {
   text-rendering: optimizeLegibility;
   font-family: var(--font-family-sans);
-  background: linear-gradient(135deg, var(--bg-light) 0%, #fff 50%, #f1f5f9 100%);
+  background: linear-gradient(135deg, var(--bg-light) 0%, #fdfcf9 50%, #f5f0e8 100%);
   background-attachment: fixed;
   color: #0f172a;
   transition: background 0.5s ease, color 0.5s ease;
 }
 
 .dark body {
-  background: linear-gradient(135deg, var(--bg-dark) 0%, #0f0f1a 50%, #0a0a12 100%);
+  background: linear-gradient(135deg, var(--bg-dark) 0%, #0f1118 50%, #0a0d12 100%);
   color: #e2e8f0;
 }
 
@@ -49,7 +49,7 @@ h1, h2, h3, h4 {
 /* ---- Selection Highlight ---- */
 ::selection {
   background-color: var(--highlight);
-  color: #000;
+  color: #1a1207;
 }
 
 /* ---- Custom Link Hover Glow ---- */
