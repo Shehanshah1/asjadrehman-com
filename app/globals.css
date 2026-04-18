@@ -32,7 +32,7 @@ body {
   font-family: var(--font-family-sans);
   background: linear-gradient(135deg, var(--bg-light) 0%, #fdfcf9 50%, #f5f0e8 100%);
   background-attachment: fixed;
-  color: #0f172a;
+  color: #030712;
   transition: background 0.5s ease, color 0.5s ease;
 }
 
@@ -40,6 +40,13 @@ body {
   background: linear-gradient(135deg, var(--bg-dark) 0%, #0f1118 50%, #0a0d12 100%);
   color: #e2e8f0;
 }
+
+/* ---- Darker Text in Light Mode for Better Readability ---- */
+html:not(.dark) .text-gray-300 { color: #6b7280; } /* -> gray-500 */
+html:not(.dark) .text-gray-400 { color: #4b5563; } /* -> gray-600 */
+html:not(.dark) .text-gray-500 { color: #374151; } /* -> gray-700 */
+html:not(.dark) .text-gray-600 { color: #1f2937; } /* -> gray-800 */
+html:not(.dark) .text-gray-700 { color: #111827; } /* -> gray-900 */
 
 /* ---- Headings ---- */
 h1, h2, h3, h4 {
@@ -250,7 +257,7 @@ table {
   text-transform: uppercase;
   border-radius: 9999px;
   background-color: #f1f5f9;
-  color: #475569;
+  color: #1f2937;
 }
 .dark .tag {
   background-color: #1e293b;
