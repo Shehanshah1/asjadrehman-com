@@ -64,9 +64,8 @@ export function LLM() {
         }
 
         // Animate through the network
-        const newActiveNodes = [];
-        // @ts-ignore
-        const newActiveConnections = [];
+        const newActiveNodes: string[] = [];
+        const newActiveConnections: string[] = [];
 
         // Add input node
         if (step >= 1) {
@@ -119,7 +118,6 @@ export function LLM() {
 
         setActiveNodes(newActiveNodes);
         setActiveConnections((prevConnections) => {
-          // @ts-ignore
           const newConnections = [...prevConnections, ...newActiveConnections];
           return Array.from(new Set(newConnections));
         });

@@ -1,5 +1,3 @@
-'use client';
-
 import { NameTransition } from './components/NameTransition';
 import Link from 'next/link';
 

@@ -1,8 +1,14 @@
-// app/blog/page.tsx
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Essays',
+  description: 'Long-form writing on politics, technology, and ideas at the edges of both.',
+  alternates: { canonical: '/blog' },
+};
 
 interface Post {
   slug: string;
