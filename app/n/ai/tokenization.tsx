@@ -125,7 +125,7 @@ export function Tokenization() {
               transition={{ delay: index * 0.1 }}
               className="border-2 border-blue-600 rounded p-2 text-2xl md:text-xl font-mono text-gray-800"
             >
-              {token}
+              {typeof token === 'string' ? token : token.text}
             </motion.div>
           ))}
         </motion.div>
