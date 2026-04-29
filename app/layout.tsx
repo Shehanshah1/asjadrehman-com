@@ -98,10 +98,10 @@ export default function RootLayout({
 
 function Footer() {
   const links = [
-    { name: 'X', url: 'https://x.com/Arbab_e_wafa' },
+    { name: 'X', url: 'https://x.com/a5jadrehman' },
     { name: 'YouTube', url: 'https://www.youtube.com/@MuhammadAsjadRehmanHashmi' },
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/asjadrehman/' },
-    { name: 'GitHub', url: 'https://github.com/Shehanshah1' },
+    { name: 'GitHub', url: 'https://github.com/asjad-rehman' },
   ];
 
   return (

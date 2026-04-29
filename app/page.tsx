@@ -39,14 +39,14 @@ const writings = [
 
 const projects = [
   {
-    href: 'https://github.com/Shehanshah1/MadinaEnterprises',
+    href: 'https://github.com/asjad-rehman/MadinaEnterprises',
     title: 'Madina Enterprises',
     desc: 'Full-stack business management system with operations and client-facing modules.',
     tags: ['Full-Stack', 'TypeScript'],
     external: true,
   },
   {
-    href: 'https://github.com/Shehanshah1/CryptoPals-Challenge-App',
+    href: 'https://github.com/asjad-rehman/CryptoPals-Challenge-App',
     title: 'CryptoPals Challenge Suite',
     desc: 'Cryptography challenge implementations — block ciphers, stream ciphers, MACs.',
     tags: ['Security', 'Cryptography'],
@@ -208,7 +208,7 @@ export default function Home() {
         </div>
         <div className="mt-4">
           <a
-            href="https://github.com/Shehanshah1"
+            href="https://github.com/asjad-rehman"
             className="mono-label opacity-60 hover:opacity-100 transition-opacity no-underline hover:no-underline inline-flex items-center gap-1"
             style={{ fontFamily: 'var(--font-mono)' }}
             target="_blank"

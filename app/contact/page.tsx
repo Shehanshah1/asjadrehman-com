@@ -32,8 +32,8 @@ const contacts = [
   },
   {
     label: 'X (Twitter)',
-    sub: '@Arbab_e_wafa',
-    href: 'https://x.com/Arbab_e_wafa',
+    sub: '@a5jadrehman',
+    href: 'https://x.com/a5jadrehman',
     external: true,
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -43,8 +43,8 @@ const contacts = [
   },
   {
     label: 'GitHub',
-    sub: 'Shehanshah1',
-    href: 'https://github.com/Shehanshah1',
+    sub: 'asjad-rehman',
+    href: 'https://github.com/asjad-rehman',
     external: true,
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
