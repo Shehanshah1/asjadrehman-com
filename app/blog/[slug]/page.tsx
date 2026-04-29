@@ -54,7 +54,6 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   const { content, data } = matter(fileContent);
   const slugs = getSortedSlugs();
   const index = slugs.findIndex((s) => s === slug);
-  // slugs sorted newest-first: index+1 = older (prev), index-1 = newer (next)
   const prevSlug = index < slugs.length - 1 ? slugs[index + 1] : null;
   const nextSlug = index > 0 ? slugs[index - 1] : null;
 
@@ -70,38 +69,68 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
   return (
     <>
-      <nav className="mb-6 px-4 max-w-4xl mx-auto">
-        <Link href="/" className="text-blue-500 hover:underline">
-          ← Home
+      <nav className="mb-8 px-4 max-w-4xl mx-auto">
+        <Link
+          href="/blog"
+          className="text-sm font-medium text-gray-500 dark:text-zinc-400 hover:text-[var(--accent)] transition-colors inline-flex items-center gap-1 no-underline hover:no-underline"
+        >
+          <span>&larr;</span> Essays
         </Link>
       </nav>
 
-      <article className="max-w-4xl mx-auto px-4 md:px-6 py-10 text-justify leading-relaxed">
-        <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight break-words">
-          {data.title}
-        </h1>
-        <p className="text-sm text-gray-500 dark:text-zinc-400 mb-10">{data.publishedAt}</p>
+      <article className="max-w-4xl mx-auto px-4 md:px-6 py-4 text-justify leading-relaxed">
+        <header className="mb-10">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight break-words tracking-tight">
+            {data.title}
+          </h1>
+          <p
+            className="text-xs text-gray-400 dark:text-zinc-600"
+            style={{ fontFamily: 'var(--font-mono)', letterSpacing: '0.08em' }}
+          >
+            {new Date(data.publishedAt).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
+          </p>
+          <div className="accent-line mt-4" />
+        </header>
         <div className="space-y-6">
           <MDXRemote source={content} />
         </div>
       </article>
 
-      <nav className="max-w-4xl mx-auto px-4 md:px-6 py-6 flex flex-wrap justify-between items-center gap-y-2">
-        {prevSlug ? (
-          <Link href={`/blog/${prevSlug}`} className="text-blue-500 hover:underline">
-            ← {prevTitle}
-          </Link>
-        ) : <span />}
+      <nav className="max-w-4xl mx-auto px-4 md:px-6 py-8">
+        <div className="section-divider" style={{ margin: '0 0 1.5rem 0' }} />
+        <div className="flex flex-wrap justify-between items-center gap-4">
+          {prevSlug ? (
+            <Link
+              href={`/blog/${prevSlug}`}
+              className="text-sm text-gray-500 dark:text-zinc-400 hover:text-[var(--accent)] transition-colors inline-flex items-center gap-1 no-underline hover:no-underline max-w-[45%]"
+            >
+              <span>&larr;</span>
+              <span className="truncate">{prevTitle}</span>
+            </Link>
+          ) : <span />}
 
-        <Link href="/blog" className="text-gray-500 hover:underline">
-          All Posts
-        </Link>
-
-        {nextSlug ? (
-          <Link href={`/blog/${nextSlug}`} className="text-blue-500 hover:underline">
-            {nextTitle} →
+          <Link
+            href="/blog"
+            className="mono-label opacity-60 hover:opacity-100 transition-opacity no-underline hover:no-underline text-center"
+            style={{ fontFamily: 'var(--font-mono)' }}
+          >
+            all essays
           </Link>
-        ) : <span />}
+
+          {nextSlug ? (
+            <Link
+              href={`/blog/${nextSlug}`}
+              className="text-sm text-gray-500 dark:text-zinc-400 hover:text-[var(--accent)] transition-colors inline-flex items-center gap-1 no-underline hover:no-underline max-w-[45%] text-right"
+            >
+              <span className="truncate">{nextTitle}</span>
+              <span>&rarr;</span>
+            </Link>
+          ) : <span />}
+        </div>
       </nav>
     </>
   );
