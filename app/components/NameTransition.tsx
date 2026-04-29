@@ -11,13 +11,13 @@ export function NameTransition() {
           <span className="sr-only">Asjad Rehman</span>
           <span aria-hidden="true" className="block overflow-hidden relative">
             {/* English */}
-            <span className="inline-block transition-all duration-350 ease-in-out group-hover:-translate-y-full text-gray-900 dark:text-zinc-50">
+            <span className="block transition-all duration-350 ease-in-out group-hover:-translate-y-full text-gray-900 dark:text-zinc-50">
               M. Asjad Rehman Hashmi
             </span>
             {/* Arabic/Urdu */}
             <span
               dir="rtl"
-              className="inline-block absolute left-0 top-0 transition-all duration-350 ease-in-out translate-y-full group-hover:translate-y-0 text-[var(--accent)]"
+              className="block absolute inset-0 transition-all duration-350 ease-in-out translate-y-full group-hover:translate-y-0 text-[var(--accent)]"
             >
               محمد أسجد رحمان ہاشمی
             </span>
